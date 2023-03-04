@@ -75,6 +75,11 @@ private extension NewsTableViewCell {
         
         stackView.addArrangedSubview(articleNameLabel)
         stackView.addArrangedSubview(viewsCountLabel)
+        articleNameLabel.topAnchor.constraint(equalTo: stackView.topAnchor).isActive = true
+        articleNameLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
+        viewsCountLabel.bottomAnchor.constraint(equalTo: stackView.bottomAnchor).isActive = true
+        viewsCountLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
+        stackView.spacing = 5.0
         contentView.addSubview(stackView)
         stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: articleImageView.trailingAnchor, constant: 10).isActive = true
